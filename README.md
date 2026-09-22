@@ -1,6 +1,6 @@
 # Circle
 
-A social media Android app combining a **friend-only visual feed** (Instagram-style), a **reciprocal friend network** (Facebook-style), and a **real-time trending topics layer** (Twitter/X-style) — built as no single existing app combines all three.
+A social media Android app combining a **friend-only visual feed** (Instagram-style), a **reciprocal friend network** (Facebook-style), and a **real-time trending topics layer** (Twitter/X-style) built as no single existing app combines all three.
 
 > Full research and design documentation for this app lives in the accompanying Part 1 submission: `Circle_Research_Report.docx` and `Circle_Design_Document.docx`.
 
@@ -73,6 +73,4 @@ This confirms the app builds and its tests pass on a clean machine, not only on 
 
 _(Add your unlisted YouTube link here once recorded, with a voice-over walking through each implemented feature.)_
 
-## AI usage
 
-_(If AI tools were used, add your max-500-word write-up here per the brief, e.g. covering code scaffolding assistance, debugging help, or document generation.)_
