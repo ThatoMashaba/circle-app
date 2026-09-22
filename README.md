@@ -1,6 +1,6 @@
 # Circle
 
-A social media Android app combining a **friend-only visual feed** (Instagram-style), a **reciprocal friend network** (Facebook-style), and a **real-time trending topics layer** (Twitter/X-style) built as no single existing app combines all three.
+A social media Android app combining a **friend-only visual feed** (Instagram-style), a **reciprocal friend network** (Facebook-style), and a **real-time trending topics layer** (Twitter/X-style) — built as no single existing app combines all three.
 
 > Full research and design documentation for this app lives in the accompanying Part 1 submission: `Circle_Research_Report.docx` and `Circle_Design_Document.docx`.
 
@@ -71,6 +71,21 @@ This confirms the app builds and its tests pass on a clean machine, not only on 
 
 ## Video presentation
 
-_(Add your unlisted YouTube link here once recorded, with a voice-over walking through each implemented feature.)_
+Demonstration video: https://youtu.be/sMlbe_hPK3g
 
+## AI usage
 
+I used Claude (Anthropic) at several stages of this project, always reviewing and understanding the output before using it rather than copying it blindly.
+
+**Research and design (Part 1).** I used Claude to help research and compare Instagram, Facebook, and Twitter/X for the Part 1 research report, and to help structure the design document (requirements list, API design, data listing, and project plan). I directed the app concept, feature choices (visual feed + two-way friend network + trending topics), and the app name (Circle) myself; Claude helped organise and write these up against the assignment rubric.
+
+**Code scaffolding (Part 2).** I used Claude to scaffold the initial Android project structure — the Gradle build files, the Login/Register/Home Feed/Friends/Create Post screens, the Retrofit-based Firestore REST layer, and the JUnit/Mockito unit tests. I reviewed this code, understood how each part worked, and adjusted the Firebase project configuration (project ID, `google-services.json`) myself to connect it to my own Firebase project.
+
+**Debugging.** Claude helped me work through several real build errors while setting up the project in Android Studio, including:
+- A stray typo (`it`) at the top of `app/build.gradle.kts` that caused a Gradle sync failure.
+- An "AndroidX dependencies detected but `android.useAndroidX` not enabled" error, which turned out to be caused by a missing `gradle.properties` file, and — after that was fixed — by a Windows read-only file attribute on the project folder that was silently blocking my saved changes from reaching disk. Diagnosing this required checking the file directly via PowerShell and Windows file Properties rather than trusting the IDE's display.
+- Connecting BlueStacks to Android Studio via ADB to run and test the app, since I didn't have a physical device set up.
+
+**Documentation.** I used Claude to help draft this README and the accompanying comprehensive report (`Circle_Comprehensive_Report.docx`), based on the actual app structure and the real debugging steps taken above, rather than generic or invented content.
+
+All code in this repository was reviewed and understood by me before submission, and the final app design, feature decisions, and Firebase configuration are my own.
